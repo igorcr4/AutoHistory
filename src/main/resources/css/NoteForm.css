@@ -1,0 +1,47 @@
+.submit-button {
+    -fx-background-color: #9daaac;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bold;
+}
+
+/* Efect hover pe buton */
+.submit-button:hover {
+    -fx-background-color: #009933;
+}
+
+/* Efect când butonul este apăsat */
+.submit-button:pressed {
+    -fx-background-color: #5f6a6a;
+    -fx-translate-y: 2px;
+}
+
+.delete-button {
+    -fx-background-color: #9daaac;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bold;
+}
+
+/* Efect hover pe buton */
+.delete-button:hover {
+    -fx-background-color: #e01616;
+}
+
+/* Efect când butonul este apăsat */
+.delete-button:pressed {
+    -fx-background-color: #e01616;
+    -fx-translate-y: 2px;
+}

@@ -1,0 +1,101 @@
+/* ===============================
+   📝 FORMULAR - Rotunjit și Modern
+   =============================== */
+.form-container {
+    -fx-background-color: #d7dcdd;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-border-color: #d7dcdd;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.3, 0, 4);
+}
+
+/* Stil pentru input invalid */
+.text-field.invalid {
+    -fx-border-color: #ff3333;
+    -fx-border-width: 2px;
+}
+
+/* Titlu formular */
+.form-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d2e31;
+}
+
+/* Label-urile formularului */
+.input-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5a5c5f;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bold;
+}
+
+/* ===============================
+   🔲 INPUT-URI - Modern și Responsive
+   =============================== */
+.input-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d7dcdd;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d2e31;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bold;
+}
+
+/* Efect hover pe input */
+.input-field:hover {
+    -fx-border-color: #9daaac;
+}
+
+/* Efect focus pe input */
+.input-field:focused {
+    -fx-border-color: #2d2e31;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0.5, 3, 3);
+}
+
+/* ===============================
+   🔲 TEXTAREA - MODIFICĂM PENTRU DETALII SERVICE
+   =============================== */
+.text-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d7dcdd;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d2e31;
+}
+
+/* ===============================
+   📌 BUTON SUBMIT - Modern & Soft UI
+   =============================== */
+.submit-button {
+    -fx-background-color: #9daaac;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bold;
+}
+
+/* Efect hover pe buton */
+.submit-button:hover {
+    -fx-background-color: #009933;
+}
+
+/* Efect când butonul este apăsat */
+.submit-button:pressed {
+    -fx-background-color: #5f6a6a;
+    -fx-translate-y: 2px;
+}

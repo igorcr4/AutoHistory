@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="998.0" prefWidth="1396.0" stylesheets="@../css/CarPage.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.autohistoryv2.backend.controller.CarPageController">
+
+    <left>
+       <VBox maxHeight="400.0" prefHeight="399.0" prefWidth="365.0" spacing="5.0">
+
+          <BorderPane.margin>
+             <Insets left="320.0" top="97.0" />
+          </BorderPane.margin>
+
+         <Label prefHeight="23.0" prefWidth="136.0" text="DATE VEHICUL">
+            <font>
+               <Font name="Monospaced Bold" size="18.0" />
+            </font>
+         </Label>
+
+          <HBox prefHeight="20.0" prefWidth="238.0" spacing="40.0">
+             <VBox.margin>
+                <Insets top="10.0" />
+             </VBox.margin>
+             <Label fx:id="lbCarName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="200.0">
+                <font>
+                   <Font name="Monospaced Bold" size="17.0" />
+                </font>
+             </Label>
+             <TextField fx:id="tfCarName" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="125.0">
+                <font>
+                   <Font name="Monospaced Bold" size="13.0" />
+                </font>
+                <HBox.margin>
+                   <Insets />
+                </HBox.margin>
+             </TextField>
+          </HBox>
+
+          <HBox prefHeight="26.0" prefWidth="291.0" spacing="40.0">
+             <Label fx:id="lbLicensePlate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="200.0">
+                <font>
+                   <Font name="Monospaced Bold" size="17.0" />
+                </font>
+             </Label>
+             <TextField fx:id="tfLicensePlate" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="125.0">
+                <HBox.margin>
+                   <Insets />
+                </HBox.margin>
+             </TextField>
+          </HBox>
+
+          <HBox prefHeight="26.0" prefWidth="307.0" spacing="40.0">
+             <Label fx:id="lbYear" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="200.0">
+                <font>
+                   <Font name="Monospaced Bold" size="17.0" />
+                </font>
+             </Label>
+
+             <TextField fx:id="tfYear" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="125.0">
+                <HBox.margin>
+                   <Insets />
+                </HBox.margin>
+             </TextField>
+          </HBox>
+
+          <HBox prefHeight="26.0" prefWidth="296.0" spacing="40.0">
+
+             <Label fx:id="lbEngineCapacity" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="200.0">
+                <font>
+                   <Font name="Monospaced Bold" size="17.0" />
+                </font>
+             </Label>
+
+             <TextField fx:id="tfEngineCapacity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="125.0">
+                <HBox.margin>
+                   <Insets />
+                </HBox.margin>
+             </TextField>
+
+          </HBox>
+          <Button fx:id="btnToggle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onToggleClicked" prefHeight="40.0" prefWidth="115.0" text="Editează">
+             <font>
+                <Font name="Monospaced Bold" size="16.0" />
+             </font>
+          </Button>
+       </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="610.0" prefWidth="260.0">
+         <Label alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="186.0" text="LISTA ISTORICULUI">
+            <VBox.margin>
+               <Insets top="60.0" />
+            </VBox.margin>
+            <font>
+               <Font name="Monospaced Bold" size="18.0" />
+            </font>
+         </Label>
+
+            <ListView fx:id="serviceHistoryList" maxHeight="-Infinity" maxWidth="256.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="256.0">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin></ListView>
+         <Button fx:id="deleteHistoryButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="115.0" styleClass="delete-button" text="Șterge">
+            <VBox.margin>
+               <Insets top="15.0" />
+            </VBox.margin>
+            <font>
+               <Font name="Monospaced Bold" size="16.0" />
+            </font>
+         </Button>
+
+         <BorderPane.margin>
+            <Insets left="-150.0" top="-245.0" />
+         </BorderPane.margin>
+        </VBox>
+
+    </center>
+   <right>
+
+      <AnchorPane fx:id="rightPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="311.0" BorderPane.alignment="CENTER">
+
+         <!-- VBox-ul cu notițe rămâne exact ca înainte -->
+         <VBox fx:id="notesContainer" layoutX="8.0" layoutY="92.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="603.0" prefWidth="300.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="75.0">
+            <BorderPane.margin>
+               <Insets right="150.0" top="-185.0" />
+            </BorderPane.margin>
+
+            <Label alignment="CENTER" text="NOTIȚE">
+               <font>
+                  <Font name="Monospaced Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="120.0" />
+               </VBox.margin>
+            </Label>
+            <ListView fx:id="notesTextArea" prefHeight="522.0" prefWidth="200.0" styleClass="notes-area" />
+            <Button fx:id="saveNote" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="115.0" text="Adaugă">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Monospaced Bold" size="16.0" />
+               </font>
+            </Button>
+         </VBox>
+
+         <!-- Pane-ul pentru detalii, inițial invizibil, suprapus deasupra -->
+         <Pane fx:id="serviceDetailsPane" layoutX="0.0" layoutY="146.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="360.0" prefWidth="410.0" visible="false" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="146.0">
+            <!-- Acest Pane îl încarci dinamic cu ServiceDetails.fxml,
+                 sau îi pui direct etichete. -->
+         </Pane>
+         <BorderPane.margin>
+            <Insets bottom="248.0" right="250.0" />
+         </BorderPane.margin>
+
+      </AnchorPane>
+   </right>
+
+</BorderPane>

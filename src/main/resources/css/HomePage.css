@@ -1,0 +1,120 @@
+/* 1) Stilizare generală pentru întreaga scenă (root). */
+.root {
+    -fx-background-color: #d7dcdd;
+    -fx-text-fill: #2d2e31;
+}
+
+/* 2) Stilizăm butoanele */
+.button {
+    -fx-background-color: #9daaac;
+    -fx-text-fill: #2d2e31;
+    -fx-border-color: #2d2e31;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand; /* cursor de tip "mână" la hover */
+    -fx-padding: 8 15 8 15; /* spațiu interior */
+
+    /* Umbra soft (FĂRĂ umbra albă) */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0.5, 3, 3);
+}
+
+/* Efect "hover" pe butoane: mărire + umbră întunecată */
+.button:hover {
+    -fx-scale-x: 1.07;
+    -fx-scale-y: 1.07;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.3, 3, 3);
+}
+
+/* Efect "apăsat" (presat) */
+.button:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 3, 0.2, 2, 2);
+    -fx-translate-y: 1px;
+}
+
+/* 3) Stilizarea ListView */
+
+.list-view {
+    -fx-background-color: #9daaac;
+    -fx-control-inner-background: #9daaac;
+    -fx-text-fill: #2d2e31;
+    -fx-border-color: #2d2e31;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2d2e31;
+    -fx-padding: 5px;
+}
+
+
+.list-cell:hover {
+    -fx-background-color: #b0bcc2;
+    -fx-padding: 5px 5px 5px 15px;
+}
+
+/* 4) TextField rotunjit, mic la început, se extinde la hover */
+.text-field {
+    -fx-background-color: #9daaac;
+    -fx-text-fill: #2d2e31;
+    -fx-prompt-text-fill: #2d2e31;
+    -fx-border-color: #2d2e31;
+    -fx-border-width: 1px;
+
+    /* Rotunjim total => cerc/oval */
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+
+    /* Dimensiune inițială mică (cerc) */
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    /* Aliniere text la stânga */
+    -fx-alignment: CENTER_LEFT;
+
+    /* Dezactivăm focus outline inestetic (opțional) */
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.text-field:hover {
+    /* Lărgim la 160px când mouse-ul e deasupra */
+    -fx-pref-width: 160px;
+}
+
+.delete-button {
+    -fx-background-color: #9daaac;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-font-family: Monospaced;
+    -fx-font-weight: bold;
+}
+
+/* Efect hover pe buton */
+.delete-button:hover {
+    -fx-background-color: #e01616;
+}
+
+/* Efect când butonul este apăsat */
+.delete-button:pressed {
+    -fx-background-color: #e01616;
+    -fx-translate-y: 2px;
+}
+
+

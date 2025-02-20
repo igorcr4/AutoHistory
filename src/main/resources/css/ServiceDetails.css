@@ -1,0 +1,8 @@
+.service-details-pane {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 10;
+  -fx-border-color: #cccccc;
+  -fx-border-radius: 10;
+  -fx-border-width: 1px;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 0, 2);
+}

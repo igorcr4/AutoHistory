@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="575.0" prefWidth="485.0" spacing="15.0" styleClass="form-container" stylesheets="@../css/FormService.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.autohistoryv2.backend.controller.FormServiceController">
+   <ImageView fitHeight="131.0" fitWidth="139.0">
+      <image>
+         <Image url="@/images/Logo_Service.PNG" />
+      </image>
+   </ImageView>
+
+    <!-- Input: Număr Înmatriculare -->
+    <VBox>
+        <Label styleClass="input-label" text="Număr Înmatriculare" />
+        <TextField fx:id="licensePlateField" promptText="Ex: DMD 989" styleClass="input-field" />
+    </VBox>
+
+    <!-- Input: Data Service -->
+    <VBox>
+        <Label styleClass="input-label" text="Data Service" />
+        <DatePicker fx:id="serviceDatePicker" styleClass="input-field" />
+    </VBox>
+
+    <!-- Input: Kilometraj -->
+    <VBox>
+        <Label styleClass="input-label" text="Kilometraj" />
+        <TextField fx:id="kmField" promptText="Ex: 120000" styleClass="input-field" />
+    </VBox>
+
+    <!-- Input: Cost Reparatie -->
+    <VBox>
+        <Label styleClass="input-label" text="Cost Reparatie" />
+        <TextField fx:id="costField" promptText="Ex: 450.75" styleClass="input-field" />
+    </VBox>
+
+    <!-- Input: Nume Service -->
+    <VBox>
+        <Label styleClass="input-label" text="Nume Service" />
+        <TextField fx:id="serviceNameField" promptText="Ex: HybridService" styleClass="input-field" />
+    </VBox>
+
+    <!-- Input: Detalii Service -->
+    <VBox>
+        <Label styleClass="input-label" text="Detalii Service" />
+        <TextArea fx:id="descriptionField" promptText="Ex: Schimb ulei, schimb placuțe..." styleClass="input-field" />
+    </VBox>
+
+    <!-- Buton de submit -->
+    <Button styleClass="submit-button" text="Salvează" onAction="#submitServiceForm" />
+
+</VBox>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="410.0" styleClass="service-details-pane" stylesheets="@../css/ServiceDetails.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.autohistoryv2.backend.controller.ServiceDetailsController">
+
+   <Label fx:id="serviceLicensePlate" alignment="CENTER" layoutX="163.0" layoutY="20.0" prefHeight="25.0" prefWidth="85.0" text="Numar">
+      <font>
+         <Font name="Monospaced Bold" size="20.0" />
+      </font>
+   </Label>
+
+   <Label fx:id="serviceKm" layoutX="32.0" layoutY="61.0" prefHeight="25.0" prefWidth="183.0" text="Ex. km">
+      <font>
+         <Font name="Monospaced Bold" size="16.0" />
+      </font>
+   </Label>
+
+   <TextArea fx:id="serviceDetails" layoutX="28.0" layoutY="234.0" prefHeight="101.0" prefWidth="314.0">
+      <font>
+         <Font name="Monospaced Bold" size="15.0" />
+      </font></TextArea>
+   <Label fx:id="serviceCost" layoutX="36.0" layoutY="106.0" prefHeight="20.0" prefWidth="176.0" text="Ex. lei">
+      <font>
+         <Font name="Monospaced Bold" size="16.0" />
+      </font>
+      <padding>
+         <Insets left="-4.0" />
+      </padding>
+   </Label>
+
+   <Label fx:id="serviceName" layoutX="32.0" layoutY="152.0" prefHeight="20.0" prefWidth="204.0" text="Ex. nume">
+      <font>
+         <Font name="Monospaced Bold" size="16.0" />
+      </font>
+   </Label>
+
+   <Label layoutX="29.0" layoutY="211.0" text="Detalii Service">
+      <font>
+         <Font name="Monospaced Bold" size="15.0" />
+      </font>
+   </Label>
+</Pane>
