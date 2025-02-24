@@ -12,7 +12,6 @@ import org.example.autohistoryv2.backend.service.NotesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import java.time.LocalDate;
 
 @Component
 @Controller
@@ -20,7 +19,7 @@ public class NotesController {
         @Autowired
         NotesService notesService;
         @Autowired
-        private ConfirmationNotification confirmationNotification;
+        ConfirmationNotification confirmationNotification;
 
         @FXML
         TextArea descriptionArea;
@@ -57,18 +56,19 @@ public class NotesController {
             if (confirmed) {
                 notesService.deleteNote(currentNote.getId());
                 carPageController.updateNoteList(currentNote);
+
             }
         }
     }
 
     @FXML
     public void saveNote(ActionEvent event) {
-        LocalDate date = LocalDate.now();
         String desc = descriptionArea.getText();
 
         Notes savedNote;
-        if (currentNote == null) {
-            // Notă nouă
+
+        if (currentNote == null || currentNote.getId() == null ||
+                !notesService.existsById(currentNote.getId())) {
             currentNote = new Notes();
             currentNote.setDescription(desc);
             savedNote = notesService.addNote(currentNote, carId);
@@ -77,14 +77,14 @@ public class NotesController {
             savedNote = notesService.updateNote(currentNote);
         }
 
-        // Actualizare live în ListView
         carPageController.updateNoteList(savedNote);
 
         currentNote = null;
 
         // Închidem fereastra
-        Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
     }
+
 
 }

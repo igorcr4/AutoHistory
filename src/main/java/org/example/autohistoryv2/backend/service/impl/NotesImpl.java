@@ -49,7 +49,7 @@ public class NotesImpl implements NotesService {
     public Notes updateNote(Notes updatedNote) {
 
         Notes existing = notesRepository.findById(updatedNote.getId())
-                .orElseThrow(() -> new RuntimeException("Nu exosta notita cu id " + updatedNote.getId()));
+                .orElseThrow(() -> new RuntimeException("Nu exista notita cu id " + updatedNote.getId()));
 
 
         if(updatedNote.getDate()!= null) {
@@ -66,6 +66,11 @@ public class NotesImpl implements NotesService {
     public void deleteNote(Long noteId) {
         notesRepository.deleteById(noteId);
     }
+
+    public boolean existsById(Long noteId) {
+        return notesRepository.existsById(noteId);
+    }
+
 }
 
 

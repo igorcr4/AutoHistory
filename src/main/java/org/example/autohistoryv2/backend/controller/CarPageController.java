@@ -22,7 +22,6 @@ import org.example.autohistoryv2.backend.service.CarService;
 import org.example.autohistoryv2.backend.service.NotesService;
 import org.example.autohistoryv2.backend.service.ServiceHistoryInterface;
 import org.example.autohistoryv2.backend.validation.InputValidation;
-import org.hibernate.query.sql.internal.ParameterRecognizerImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;

@@ -16,4 +16,6 @@ public interface NotesService {
     Notes updateNote(Notes updatedNote);
 
     void deleteNote(Long noteId);
+
+    boolean existsById(Long noteId);
 }
